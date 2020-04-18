@@ -128,7 +128,7 @@ text-align: right;
         }
 
 
-     @media screen and (max-width: 500px){
+     @media screen and (max-width: 500px) {
       .content1, .content2, .content3, .content4{
          width: 100%;
        }
