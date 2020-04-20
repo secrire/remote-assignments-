@@ -90,6 +90,8 @@ margin:1rem auto;}
 .row{
   width: 100%;
   margin:0 auto;
+  display:flex;
+  flex-direction: column;
 }
 
 .content-box{
@@ -126,13 +128,14 @@ h3, h4, h5, h6{
 
 @media (min-width: 500px) {
  .row{
-    display:flex;
     flex-wrap:wrap;
+   flex-direction: row;
   }
 .content-box{
 flex:1 40%;
 }
 }
+
 
 
 @media (min-width: 800px) {
