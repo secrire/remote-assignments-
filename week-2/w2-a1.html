@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 1</title>
+</head>
+
+<body>
+//Batch #11 / Front-End ClassRemote Assignment 1:<br>
+<br>
+function max(numbers){// your code here, for-loop method preferred<br>
+<br>
+let oneMax= numbers[0];    //預設第一個最大<br>
+for( let i=0; i< numbers.length; i+=1){<br>
+if ( oneMax < numbers[i]) {<br>
+oneMax= numbers[i];  //oneMax值可以隨著循環的測試而改變<br>
+}<br>
+}<br>
+return oneMax;<br>
+}<br>
+<br>
+document.write( max([1, 2, 4, 5]));<br>
+document.write( max([5, 2, 7, 1, 6]));<br>
+<br>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+// assignment 3:<br>
+<br>
+ function avg(data){<br>
+   // your code here<br>
+   let productArray = data.products;  //朝題目解答，指定對象<br>
+   let priceSum = 0;  //求平均數-> 總和/個數-> 先設總和為變數且值＝0<br>
+    <br>
+   for (let i=0 ; i< productArray.length ; i+=1){      //總和是連續相加-> loop, 勿忘let<br>
+       priceSum = productArray[i].price +priceSum;}  // ＊＊＊＊＊＊＊priceSum的值會一直隨著循環而變化<br>
+      <br>
+      let priceAve = priceSum / productArray.length ;<br>
+      return priceAve;<br>
+    }<br>
+<br>
+  document.write ( avg({size:3,<br>
+        products:[{name:"Product 1",price:100},<br>
+                         {name:"Product 2",price:700},<br>
+                         {name:"Product 3",price:250}<br>
+                        ]}));<br>
+ <br>
+   // show the average price of all products<br>
+   </body>
+   </html>
