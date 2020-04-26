@@ -25,4 +25,6 @@ let moretoshow = document.querySelector('.moretoshow');
 
 call.addEventListener('click',()  =>{
  moretoshow = moretoshow.classList.toggle("active");
+
 });
+       
