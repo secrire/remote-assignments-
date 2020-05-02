@@ -1,0 +1,55 @@
+<!-- 建html檔怎麼沒先帶基本頭身！！！-->
+<!DOCTYPE html>
+<html>
+  <head>
+<title>sum</title>
+  </head>
+
+<body>
+
+<!-- user interface- enter a number and get result -->
+
+<input class="enternum" type="text">
+<button class="resultbutton">get result </button>
+<div class="result"></div>      <!-- 一個顯示結果的地方 -->
+
+<!-- 寫js在html內 -->
+  <script>
+
+// number=10
+  let xhr =new XMLHttpRequest();
+
+  xhr.open("GET",'http://localhost:3000/getData?number=10​');
+
+  xhr.send();
+
+  xhr.onreadystatechange =function(){
+  if(xhr.readyState ===4 && xhr.status===200){
+  console.log(xhr.responseText);
+  }
+  };
+</script>
+<script>
+// user interface- enter a number and get result
+ let enternum = document.querySelector(".enternum");   //選元素
+ let resultbutton = document.querySelector(".resultbutton");
+ let result = document.querySelector(".result");
+
+resultbutton.addEventListener("click",() =>{
+ let xhr =new XMLHttpRequest();
+
+ xhr.open("GET",`http://localhost:3000/getData?number=${enternum.value}`);
+
+ xhr.send();
+
+ xhr.onreadystatechange =function(){
+ if(xhr.readyState ===4 && xhr.status===200){
+ result.innerText = xhr.responseText;
+ }
+ };
+});
+
+  </script>
+
+</body>
+</html>
