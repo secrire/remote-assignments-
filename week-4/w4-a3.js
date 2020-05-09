@@ -1,9 +1,9 @@
 class App extends React.Component {
   render() {
     return(
-      <Banner />
-      <MainContent />
-      <Footer />
+      <Banner></Banner>
+      <MainContent></MainContent>
+      <Footer></Footer>
       );
   }
 };
