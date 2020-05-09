@@ -27,11 +27,10 @@ class Header extends React.Component {
     <a href="w4-a3.html" className="logo">allie wu</a>
      {/*}<!-- Nav-->*/}
 				<nav className="main-nav">
-				<a href="#"><img className="menuImg"
+				<span className="menuImg"
       onClick={ () =>this.active_toggle()}
 src="iconfinder_line-list_1954545-1.png" width="30px" height="30px">
-  </img>
-  </a>
+  </span>
   <ul className={"navlist" + (this.state.toggle_class ? "active" : null)}>
 
     <button className="closemenu" onClick={ ()=> this.active_toggle()}>x</button>
