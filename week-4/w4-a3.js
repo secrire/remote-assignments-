@@ -1,56 +1,50 @@
-{/* class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <Banner />
+        <MainContent />
         <Footer />
       </div>
     );
   }
 }
 
-{/*}<!-- Header -->
+{/*<!-- Header -->*/}
 class Header extends React.Component {
   state={
-
+   toggle_class: false,
   };
 
-=() =>{
-  this.setState({  });
-};
+  active_toggle = () => {
+         this.setState({ toggle_class: !this.state.toggle_class })
+     }
 
   render() {
     return(
     <header>
     <a href="w4-a3.html" className="logo">allie wu</a>
-     <!-- Nav-->
+     {/*}<!-- Nav-->*/}
 				<nav className="main-nav">
 				<a href="#"><img className="menuImg"
-      onClick={ () =>this.()}
+      onClick={ () =>this.active_toggle()}
 src="iconfinder_line-list_1954545-1.png" width="30px" height="30px">
   </a>
-  <ul class= "navlist">
-<li><a href="#">about</a></li>
-<li><a href="#">work</a></li>
-<li><a href="#">blog</a></li>
-<li><a href="#">contact</a><li>
-</ul>
-          <div class="mobile_menu">
-    <button className="closemenu" onClick={ ()=>}>x</button>
-  <ul class="mobile_menu_list">
+  <ul className={"navlist" + (this.state.toggle_class ? "active" : null)}>
+
+    <button className="closemenu" onClick={ ()=> this.active_toggle()}>x</button>
+
 <li><a href="#">about</a></li>
 <li><a href="#">work</a></li>
 <li><a href="#">blog</a></li>
 <li><a href="#">contact</a><li>
             </ul>
-		</div>
         </nav>
   </header>
         );
   }
 };
-
-*/}
 
 
 {/*<!-- Banner -->*/}
@@ -75,7 +69,7 @@ render() {
 }};
 
 
-		{/*<!-- content-->
+		{/*<!-- content-->*/}
 class MainContent extends React.Component {
   state={
          moretoshowDisplayed: false,
@@ -107,7 +101,7 @@ render() {
 </div>
 </section>
 )}};
-*/}
+
 
 {/*<!-- Footer-->*/}
 function Footer() {
@@ -121,12 +115,7 @@ function Footer() {
   );
 }
 
-ReactDOM.render (
-     <Banner />,
-     document.getElementById('banner')
-      );
-
-      ReactDOM.render (
-           <Footer />,
-           document.getElementById('footer')
-            );
+ReactDOM.render(
+  <App />,
+  document.getElementById("root")
+);
