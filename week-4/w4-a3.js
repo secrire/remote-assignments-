@@ -3,7 +3,6 @@ class App extends React.Component {
     return (
       <div>
         <Banner />
-        <MainContent />
         <Footer />
       </div>
     );
@@ -76,7 +75,7 @@ render() {
 }};
 
 
-		{/*<!-- content-->*/}
+		{/*<!-- content-->
 class MainContent extends React.Component {
   state={
          moretoshowDisplayed: false,
@@ -108,7 +107,7 @@ render() {
 </div>
 </section>
 )}};
-
+*/}
 
 {/*<!-- Footer-->*/}
 function Footer() {
