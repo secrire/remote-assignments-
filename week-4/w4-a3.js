@@ -30,6 +30,7 @@ class Header extends React.Component {
 				<a href="#"><img className="menuImg"
       onClick={ () =>this.active_toggle()}
 src="iconfinder_line-list_1954545-1.png" width="30px" height="30px">
+  </img>
   </a>
   <ul className={"navlist" + (this.state.toggle_class ? "active" : null)}>
 
