@@ -1,4 +1,4 @@
-class App extends React.Component {
+{/* class App extends React.Component {
   render() {
     return (
       <div>
@@ -9,7 +9,7 @@ class App extends React.Component {
   }
 }
 
-{/*<!-- Header -->
+{/*}<!-- Header -->
 class Header extends React.Component {
   state={
 
@@ -122,6 +122,11 @@ function Footer() {
 }
 
 ReactDOM.render (
-     <App />,
-     document.getElementById('root')
+     <Banner />,
+     document.getElementById('banner')
       );
+
+      ReactDOM.render (
+           <Footer />,
+           document.getElementById('footer')
+            );
