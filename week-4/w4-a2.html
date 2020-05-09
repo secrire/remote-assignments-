@@ -1,0 +1,50 @@
+<html>
+  <head>
+    </head>
+  <body>
+    <div class="products">
+    </div>
+    <script>
+      function ajax(src, callback){
+// your code here
+  let xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+    if(xhr.readyState === 4 && xhr.status === 200){
+     callback(JSON.parse(xhr.response));   //需string轉成js,以用於js
+    }else{
+      console.log("error");
+    }
+  };
+
+  xhr.open('GET', src);
+  xhr.send();
+}
+
+function render(data){
+// your code here.
+ //​document.createElement()​ and ​appendChild()​ are preferred. No ​innerHTML​ or something alike
+  let products = document.querySelector('.products');
+  for (let i = 0; i < data.length; i+=1){    //提出每個元素！！！
+
+  let name = document.createElement('p');
+  name.textContent = data[i].name;
+  products.appendChild (name);
+
+  let price = document.createElement('p');
+  price.textContent = data[i].price;
+  products.appendChild (price);
+
+  let desc = document.createElement('p');
+  desc.textContent = data[i].description;
+  products.appendChild (desc);
+}
+}
+
+ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function(response){
+  render(response);
+});
+// you should get product information in JSON format and render data in the page
+
+      </script>
+    </body>
+  </html>

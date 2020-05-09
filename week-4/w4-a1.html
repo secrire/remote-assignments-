@@ -1,0 +1,26 @@
+<html>
+  <head>
+    </head>
+  <body>
+    Week 4 Assignment 1:
+    <script>
+    function delayedResult(n1, n2, delayTime, callback){
+  // your code here
+
+  let result = n1 + n2;
+  return result;
+
+
+  window.setTimeout(callback , delayTime);
+
+}
+
+
+
+delayedResult(-5, 10, 2000, function(result){
+window.alert(result);
+});
+      </script>
+
+    </body>
+  </html>
