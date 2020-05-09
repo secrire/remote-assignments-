@@ -6,13 +6,7 @@
     <script>
     function delayedResult(n1, n2, delayTime, callback){
   // your code here
-
-  let result = n1 + n2;
-  return result;
-
-
-  window.setTimeout(callback , delayTime);
-
+  window.setTimeout(function(){callback(n1+n2);} , delayTime);
 }
 
 
