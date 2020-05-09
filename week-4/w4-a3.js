@@ -1,12 +1,14 @@
 class App extends React.Component {
   render() {
-    return(
-      <Banner></Banner>
-      <MainContent></MainContent>
-      <Footer></Footer>
-      );
+    return (
+      <div>
+        <Banner />
+        <MainContent />
+        <Footer />
+      </div>
+    );
   }
-};
+}
 
 {/*<!-- Header -->
 class Header extends React.Component {
