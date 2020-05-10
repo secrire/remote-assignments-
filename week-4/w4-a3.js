@@ -105,6 +105,7 @@ render() {
 		{/*<!-- content-->*/}
 class MainContent extends React.Component {
   state={
+         originalboxes: true,
          moretoshowDisplayed: false,
   };
 
@@ -117,7 +118,42 @@ render() {
 <section className="main-content">
 <h2 className="main-content-title">to start somewhere</h2>
 
-<div className="row" >
+        <ContentBoxes Displayed={this.state.originalboxes}>
+          <ContentBox> content1 </ContentBox>
+          <ContentBox> content2 </ContentBox>
+          <ContentBox> content3 </ContentBox>
+          <ContentBox> content4 </ContentBox>
+        </ContentBoxes>
+
+        <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
+
+        <ContentBoxes Displayed={this.state.moretoshowDisplayed}>
+          <ContentBox> content5 </ContentBox>
+          <ContentBox> content6 </ContentBox>
+          <ContentBox> content7 </ContentBox>
+          <ContentBox> content8 </ContentBox>
+        </ContentBoxes>
+      </section>
+    );
+  }
+}
+
+const ContentBoxes = (props) => (
+  <div
+    className="content-boxes"
+    style={{ display: props.Displayed ? "block" : "none" }}
+  >
+    <div className="row">{props.children}</div>
+  </div>
+);
+
+const ContentBox = (props) => (
+  <div className="content-box">
+  </div>
+);
+
+{/*
+  <div className="row" >
 <div className="content-box">content1</div>
 <div className="content-box">content2</div>
 <div className="content-box">content3</div>
@@ -143,6 +179,7 @@ const Moretoshow = (props) => (
   <div>{props.lastChild}</div>
   </div>
 );
+*/}
 
 {/*<!-- Footer-->*/}
 function Footer() {
