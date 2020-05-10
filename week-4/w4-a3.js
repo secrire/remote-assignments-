@@ -15,24 +15,52 @@ class App extends React.Component {
 {/*<!-- Header -->*/}
 class Header extends React.Component {
   state = {
-    navlist: ["about", "work", "blog", "contact"],
-    mobileMenuDisplayed: false,
+    display:""
   };
 
   showMobileMenu = () => {
-    this.setState({ mobileMenuDisplayed: true });
+    this.setState({ display:"block" });
   };
 
   hideMobileMenu = () => {
-    this.setState({ mobileMenuDisplayed: false });
+    this.setState({ display:"none" });
   };
 
   render() {
     return(
     <header>
+    <div>
     <a href="w4-a3.html" className="logo">allie wu</a>
 
      {/*<!-- Nav -->*/}
+     <ul className="main-nav" style={{display: this.state.display}}>
+                 <li><a href="#">about</a></li>
+                 <li><a href="#">work</a></li>
+                 <li><a href="#">blog</a></li>
+                 <li><a href="#">contact</a></li>
+               </ul>
+    </div>
+
+    <div className = "menuImg" onClick={this.showMobileMenu}>
+                <img src="iconfinder_line-list_1954545-1.png" width="30px" height="30px" />
+              </div>
+
+              <button
+                className="closemenu"
+                onClick={ ()=> props.hideMobileMenu }
+                style={{display: this.state.display}}
+              >
+                x
+              </button>
+              
+         </div>
+         </header>
+         );
+      }
+    }
+
+{/*
+
      <MainNav
         navlist={this.state.navlist}
         showMobileMenu={this.showMobileMenu}
@@ -42,7 +70,7 @@ class Header extends React.Component {
         mobileMenuDisplayed={this.state.mobileMenuDisplayed}
         hideMobileMenu={this.hideMobileMenu}
       />
-</header>
+
 );
 }
 };
@@ -79,7 +107,7 @@ const MobileMenu = (props) => (
     </ul>
   </nav>
 );
-
+*/}
 
 {/*<!-- Banner -->*/}
 class Banner extends React.Component {
