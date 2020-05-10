@@ -126,19 +126,18 @@ render() {
 
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
-<Moretoshow Displayed={this.state.moretoshowDisplayed}>
+<div Moretoshow Displayed={this.state.moretoshowDisplayed}>
   <div className="content-box">content5</div>
   <div className="content-box">content6</div>
   <div className="content-box">content7</div>
   <div className="content-box">content8</div>
-
 </Moretoshow>
+</div>
 </section>
 )}};
 
 const Moretoshow = (props) => (
-  <div
-    className="moretoshow"
+  <div className="moretoshow"
     style={{ display: props.Displayed ? "flex" : "none" }}
   >
   <div>{props.lastChild}</div>
