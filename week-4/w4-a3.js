@@ -52,8 +52,6 @@ class Header extends React.Component {
               >
                 x
               </button>
-
-         </div>
          </header>
          );
       }
