@@ -4,7 +4,8 @@ class App extends React.Component {
       <div>
         <Header />
         <Banner />
-        <MainContent />
+        <Row />
+        <Call />
         <Footer />
       </div>
     );
@@ -102,46 +103,51 @@ render() {
 }};
 
 
-		{/*<!-- content-->*/}
-class MainContent extends React.Component {
+		{/*<!-- content-->
+      <section className="main-content"></section> */}
+class Row extends React.Component {
+  render() {
+      return(
+        <div>
+        <h2 className="main-content-title">to start somewhere</h2>
+        </div>
+
+        <div className="row" >
+        <div className="content-box">content1</div>
+        <div className="content-box">content2</div>
+        <div className="content-box">content3</div>
+        <div className="content-box">content4</div>
+        </div>
+      )
+    }
+  }
+
+
+  class Call extends React.Component {
   state={
-         moretoshowDisplayed: false,
+         display:"none",
   };
 
  showMoreBox=() =>{
-  this.setState({ moretoshowDisplayed: true });
+  this.setState({ display:"flex" });
 };
 
 render() {
     return(
-<section className="main-content">
-<h2 className="main-content-title">to start somewhere</h2>
-
-  <div className="row" >
-<div className="content-box">content1</div>
-<div className="content-box">content2</div>
-<div className="content-box">content3</div>
-<div className="content-box">content4</div>
-</div>
 
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
-<Moretoshow Displayed={this.state.moretoshowDisplayed}>
+<div className="moretoshow" style={{ display: this.state.display }}>
   <div className="content-box">content5</div>
   <div className="content-box">content6</div>
   <div className="content-box">content7</div>
   <div className="content-box">content8</div>
-</Moretoshow>
-</section>
-)}};
+</div>
+)
+}
+}
 
-const Moretoshow = (props) => (
-  <div className="moretoshow"
-    style={{ display: props.Displayed ? "flex" : "none" }}
-  >
-  <div>{props.lastChild}</div>
-  </div>
-);
+
 
 
 {/*<!-- Footer-->*/}
