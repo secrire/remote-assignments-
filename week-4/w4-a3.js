@@ -127,10 +127,6 @@ render() {
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
   <Moretoshow Displayed={this.state.moretoshowDisplayed}>
-<div className="content-box">content5</div>
-<div className="content-box">content6</div>
-<div className="content-box">content7</div>
-<div className="content-box">content8</div>
 
 </Moretoshow>
 </section>
@@ -141,6 +137,11 @@ const Moretoshow = (props) => (
     className="moretoshow"
     style={{ display: props.Displayed ? "flex" : "none" }}
   >
+  <div className="content-box">content5</div>
+  <div className="content-box">content6</div>
+  <div className="content-box">content7</div>
+  <div className="content-box">content8</div>
+
   </div>
 );
 
