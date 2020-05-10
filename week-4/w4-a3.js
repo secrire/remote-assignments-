@@ -109,7 +109,7 @@ class MainContent extends React.Component {
   };
 
  showMoreBox=() =>{
-  this.setState({ moretoshowDisplayed: !this.state.moretoshowDisplayed });
+  this.setState({ moretoshowDisplayed: true });
 };
 
 render() {
@@ -123,6 +123,7 @@ render() {
 <div className="content-box">content3</div>
 <div className="content-box">content4</div>
 </div>
+
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
   <Moretoshow Displayed={this.state.moretoshowDisplayed}>

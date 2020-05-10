@@ -90,7 +90,7 @@ h2 {
   color: gray;
 margin:1rem auto;}
 
-.row , .moretoshow.active{
+.row {
   width: 100%;
   margin:0 auto;
   display:flex;
@@ -132,7 +132,7 @@ footer {
 /* media */
 
 @media (min-width: 500px) {
- .row , .moretoshow.active{
+ .row {
 flex-wrap:wrap;
    flex-direction: row;
   }
