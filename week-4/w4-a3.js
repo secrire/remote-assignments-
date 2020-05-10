@@ -13,38 +13,71 @@ class App extends React.Component {
 
 {/*<!-- Header -->*/}
 class Header extends React.Component {
-  state={
-   toggle_class: false,
+  state = {
+    navlist: ["about", "work", "blog", "contact"],
+    mobileMenuDisplayed: false,
   };
 
-  active_toggle = () => {
-         this.setState({ toggle_class: !this.state.toggle_class })
-     }
+  showMobileMenu = () => {
+    this.setState({ mobileMenuDisplayed: true });
+  };
+
+  hideMobileMenu = () => {
+    this.setState({ mobileMenuDisplayed: false });
+  };
 
   render() {
     return(
     <header>
     <a href="w4-a3.html" className="logo">allie wu</a>
-     {/*}<!-- Nav-->*/}
-				<nav className="main-nav">
-				<span className="menuImg"
-      onClick={ () =>this.active_toggle()}
-src="iconfinder_line-list_1954545-1.png" width="30px" height="30px">
-  </span>
-  <ul className={"navlist" + (this.state.toggle_class ? "active" : null)}>
 
-    <button className="closemenu" onClick={ ()=> this.active_toggle()}>x</button>
-
-<li><a href="#">about</a></li>
-<li><a href="#">work</a></li>
-<li><a href="#">blog</a></li>
-<li><a href="#">contact</a></li>
-            </ul>
-        </nav>
-  </header>
-        );
-  }
+     {/*<!-- Nav -->*/}
+     <MainNav
+        navlist={this.state.navlist}
+        showMobileMenu={this.showMobileMenu}
+      />
+      <MobileMenu
+        navlist={this.state.navlist}
+        mobileMenuDisplayed={this.state.mobileMenuDisplayed}
+        hideMobileMenu={this.hideMobileMenu}
+      />
+</header>
+);
+}
 };
+
+const MainNav = (props) => (
+  <nav className="main-nav">
+  <span className="menuImg" onClick={ () =>props.showMobileMenu()}>
+<img src="iconfinder_line-list_1954545-1.png" width="30px" height="30px" />
+</span>
+    <ul className="nav-list">
+      {props.navlist.map((navItem) => (
+        <li>{navItem}</li>
+      ))}
+    </ul>
+  </nav>
+);
+
+const MobileMenu = (props) => (
+  <nav
+    className={`mobile_menu mobile-menu_${
+      props.mobileMenuDisplayed ? "shown" : "hidden"
+    }`}
+  >
+    <button
+      className="closemenu"
+      onClick={ ()=> props.hideMobileMenu }
+    >
+      x
+    </button>
+    <ul className="mobile-menu-list">
+      {props.navList.map((navItem) => (
+        <li>{navItem}</li>
+      ))}
+    </ul>
+  </nav>
+);
 
 
 {/*<!-- Banner -->*/}
