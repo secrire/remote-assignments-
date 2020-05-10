@@ -32,7 +32,7 @@ ul{
 }
 
   /* Nav */
-.navlist {
+.nav-list {
   display:none;
         font-size: 1.1rem;
       }
@@ -148,12 +148,12 @@ flex:1 40%;
   .menuImg{
     display:none;}
 
-    .navlist{
+    .nav-list{
       display: flex;
       padding: 0.3rem 0;
     }
 
-    .navlist li{
+    .nav-list li{
       padding: 1rem;
     }
   }
