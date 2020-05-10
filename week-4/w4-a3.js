@@ -52,7 +52,7 @@ class Header extends React.Component {
               >
                 x
               </button>
-              
+
          </div>
          </header>
          );
@@ -140,7 +140,7 @@ class Row extends React.Component {
         <h2 className="main-content-title">to start somewhere</h2>
         </div>
 
-        <div className="row" >
+        <div className="row">
         <div className="content-box">content1</div>
         <div className="content-box">content2</div>
         <div className="content-box">content3</div>
