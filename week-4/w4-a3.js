@@ -28,7 +28,7 @@ class Header extends React.Component {
 
   render() {
     return(
-    <header>
+<div>
     <div>
     <a href="w4-a3.html" className="logo">allie wu</a>
 
@@ -52,7 +52,7 @@ class Header extends React.Component {
               >
                 x
               </button>
-         </header>
+</div>
          );
       }
     }
