@@ -105,7 +105,7 @@ render() {
 const Moretoshow = (props) => (
   <div
     className="moretoshow"
-    style={{ display: props.Displayed ? "block" : "none" }}
+    style={{ display: props.Displayed ? "flex" : "none" }}
   >
   </div>
 );
