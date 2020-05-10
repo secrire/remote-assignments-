@@ -92,16 +92,23 @@ render() {
 </div>
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
-  <div className={"moretoshow" + (this.state.moretoshowDisplayed ? "active" : null)}>
+  <Moretoshow Displayed={this.state.moretoshowDisplayed}>
 <div className="content-box">content5</div>
 <div className="content-box">content6</div>
 <div className="content-box">content7</div>
 <div className="content-box">content8</div>
 
-</div>
+</Moretoshow>
 </section>
 )}};
 
+const Moretoshow = (props) => (
+  <div
+    className="moretoshow"
+    style={{ display: props.Displayed ? "block" : "none" }}
+  >
+  </div>
+);
 
 {/*<!-- Footer-->*/}
 function Footer() {
