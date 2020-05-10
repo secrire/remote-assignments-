@@ -38,7 +38,7 @@ src="iconfinder_line-list_1954545-1.png" width="30px" height="30px">
 <li><a href="#">about</a></li>
 <li><a href="#">work</a></li>
 <li><a href="#">blog</a></li>
-<li><a href="#">contact</a><li>
+<li><a href="#">contact</a></li>
             </ul>
         </nav>
   </header>
