@@ -126,12 +126,12 @@ render() {
 
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
-<div Moretoshow Displayed={this.state.moretoshowDisplayed}>
+<Moretoshow Displayed={this.state.moretoshowDisplayed}>
   <div className="content-box">content5</div>
   <div className="content-box">content6</div>
   <div className="content-box">content7</div>
   <div className="content-box">content8</div>
-</div>
+</Moretoshow>
 </section>
 )}};
 
