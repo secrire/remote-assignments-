@@ -53,7 +53,7 @@ const MainNav = (props) => (
 </span>
     <ul className="nav-list">
       {props.navlist.map((navItem) => (
-        <li>{navItem}</li>
+        <li key={navItem}>{navItem}</li>
       ))}
     </ul>
   </nav>
@@ -61,7 +61,7 @@ const MainNav = (props) => (
 
 const MobileMenu = (props) => (
   <nav
-    className={`mobile_menu mobile-menu_${
+    className={`mobile_menu mobile_menu_${
       props.mobileMenuDisplayed ? "shown" : "hidden"
     }`}
   >
@@ -71,9 +71,9 @@ const MobileMenu = (props) => (
     >
       x
     </button>
-    <ul className="mobile-menu-list">
-      {props.navList.map((navItem) => (
-        <li>{navItem}</li>
+    <ul className="mobile_menu_list">
+      {props.navlist.map((navItem) => (
+        <li key={navItem}>{navItem}</li>
       ))}
     </ul>
   </nav>
