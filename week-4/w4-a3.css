@@ -160,7 +160,7 @@ flex-wrap:wrap;
   }
 
  .moretoshow{
-   flex-wrap:wrap;
+   flex-direction: row;
  }
 
 .content-box{
