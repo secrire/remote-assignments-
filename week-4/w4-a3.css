@@ -113,7 +113,8 @@ margin:1rem auto;}
 
 .moretoshow{
 justify-content: center;
-flex-wrap:wrap;
+  flex-direction: column;
+  flex-wrap:wrap;
    }
    /*  display: none;
     width: 100%;
