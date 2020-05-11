@@ -154,15 +154,11 @@ footer {
 /* media */
 
 @media (min-width: 500px) {
- .row {
+ .row , .moretoshow {
 flex-wrap:wrap;
    flex-direction: row;
   }
 
- .moretoshow{
-   flex-wrap:wrap;
-   flex-direction: row;
- }
 
 .content-box{
 flex:1 40%;
