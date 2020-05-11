@@ -113,12 +113,11 @@ margin:1rem auto;}
 
 .moretoshow{
       width: 100%;
+      margin:0 auto;
       flex-direction: column;
 justify-content: center;
    }
    /*  display: none;
-
-   flex-wrap:wrap;
   }
   */
 
@@ -157,7 +156,6 @@ footer {
  .row , .moretoshow {
 flex-wrap:wrap;
    flex-direction: row;
-   justify-content: center;
   }
 
 
