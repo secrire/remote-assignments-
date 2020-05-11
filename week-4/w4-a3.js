@@ -184,7 +184,7 @@ render() {
 
       const Moretoshow = (props) => (
         <div
-          style={{ display: props.isDisplayed ? "flex" : "none" }}
+          style={{ display: props.isDisplayed ? "block" : "none" }}
         >
           <div>{props.children}</div>
         </div>
