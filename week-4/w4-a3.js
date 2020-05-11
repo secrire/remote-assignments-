@@ -184,7 +184,7 @@ render() {
 
       const ContentBoxes = (props) => (
         <div
-          style={{ display: props.isDisplayed ? "block" : "none" }}
+          style={{ display: props.isDisplayed ? "flex" : "none" }}
         >
           <div>{props.children}</div>
         </div>
