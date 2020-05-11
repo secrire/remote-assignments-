@@ -16,7 +16,7 @@ class App extends React.Component {
   {/*<!-- Nav -->*/}
 class Header extends React.Component {
   state = {
-    navlist: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    navlist: ["about", "work", "blog", "contact"],
     isMobileMenuShown: false,
   };
 
@@ -69,7 +69,7 @@ class Header extends React.Component {
 
      <button
        className="closemenu"
-       onClick={ ()=> props.hideMobileMenu }
+       onClick={ ()=> props.hideMobileMenu() }
      >
        x
      </button>
@@ -159,12 +159,12 @@ render() {
             <h2 className="main-content-title">to start somewhere</h2>
             </div>
 
-              <div className="row">
+              <section className="row">
               <div className="content-box">content1</div>
               <div className="content-box">content2</div>
               <div className="content-box">content3</div>
               <div className="content-box">content4</div>
-              </div>
+              </section>
 
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
@@ -190,9 +190,6 @@ render() {
           <div className="row">{props.children}</div>
         </div>
       );
-
-
-
 
 
 
