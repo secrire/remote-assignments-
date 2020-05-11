@@ -175,6 +175,24 @@ render() {
 
 
 
+<<<<<<< HEAD
+||||||| 6c613b1... Update w4-a3.js
+const Moretoshow = (props) => (
+  <div
+    className="moretoshow"
+    style={{ display: props.Displayed ? "flex" : "none" }}
+  >
+  </div>
+);
+=======
+const Moretoshow = (props) => (
+  <div
+    className="moretoshow"
+    style={{ display: props.Displayed ? "block" : "none" }}
+  >
+  </div>
+);
+>>>>>>> parent of 6c613b1... Update w4-a3.js
 
 {/*<!-- Footer-->*/}
 function Footer() {
