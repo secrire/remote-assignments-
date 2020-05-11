@@ -170,12 +170,12 @@ render() {
 
 
               <Moretoshow isDisplayed={this.state.isBoxesGroup2Displayed}>
-              <div>
+
                 <div className="content-box">content5</div>
                 <div className="content-box">content6</div>
                 <div className="content-box">content7</div>
                 <div className="content-box">content8</div>
-              </div>
+      
               </Moretoshow>
             </section>
           );
