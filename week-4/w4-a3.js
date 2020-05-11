@@ -169,20 +169,20 @@ render() {
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
 
-              <ContentBoxes isDisplayed={this.state.isBoxesGroup2Displayed}>
+              <Moretoshow isDisplayed={this.state.isBoxesGroup2Displayed}>
               <div className="moretoshow">
                 <div className="content-box">content5</div>
                 <div className="content-box">content6</div>
                 <div className="content-box">content7</div>
                 <div className="content-box">content8</div>
               </div>
-              </ContentBoxes>
+              </Moretoshow>
             </section>
           );
         }
       }
 
-      const ContentBoxes = (props) => (
+      const Moretoshow = (props) => (
         <div
           style={{ display: props.isDisplayed ? "flex" : "none" }}
         >
