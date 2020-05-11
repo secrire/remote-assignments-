@@ -170,7 +170,7 @@ render() {
 
 
               <Moretoshow isDisplayed={this.state.isBoxesGroup2Displayed}>
-              <div className="moretoshow">
+              <div>
                 <div className="content-box">content5</div>
                 <div className="content-box">content6</div>
                 <div className="content-box">content7</div>
@@ -184,6 +184,7 @@ render() {
 
       const Moretoshow = (props) => (
         <div
+          className="moretoshow"
           style={{ display: props.isDisplayed ? "flex" : "none" }}
         >
           <div>{props.children}</div>
