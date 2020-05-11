@@ -4,8 +4,7 @@ class App extends React.Component {
       <div>
         <Header />
         <Banner />
-        <Row />
-        <Call />
+        <MainContent />
         <Footer />
       </div>
     );
@@ -13,26 +12,84 @@ class App extends React.Component {
 }
 
 {/*<!-- Header -->*/}
+
+  {/*<!-- Nav -->*/}
 class Header extends React.Component {
   state = {
-    display:""
+    navlist: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    isMobileMenuShown: false,
   };
 
   showMobileMenu = () => {
-    this.setState({ display:"block" });
+    this.setState({ isMobileMenuShown: true });
   };
 
   hideMobileMenu = () => {
-    this.setState({ display:"none" });
+    this.setState({ isMobileMenuShown: false });
   };
 
   render() {
     return(
-<div>
-    <div>
-    <a href="w4-a3.html" className="logo">allie wu</a>
+      <header className="main-header">
+              <a href="w4-a3.html" className="logo">allie wu</a>
 
-     {/*<!-- Nav -->*/}
+      <MainNav
+         navlist={this.state.navlist}
+         showMobileMenu={this.showMobileMenu}
+       />
+       <MobileMenu
+         navlist={this.state.navlist}
+         mobileMenuDisplayed={this.state.mobileMenuDisplayed}
+         hideMobileMenu={this.hideMobileMenu}
+       />
+     </header>
+ );
+ }
+ };
+
+ const MainNav = (props) => (
+   <nav className="main-nav">
+   <span className="menuImg" onClick={ () =>props.showMobileMenu()}>
+ <img src="iconfinder_line-list_1954545-1.png" width="30px" height="30px" />
+ </span>
+     <ul className="nav-list">
+       {props.navlist.map((navItem) => (
+         <li key={navItem}>{navItem}</li>
+       ))}
+     </ul>
+   </nav>
+ );
+
+ const MobileMenu = (props) => (
+   <nav
+     className={`mobile_menu mobile_menu_${
+       props.mobileMenuDisplayed ? "shown" : "hidden"
+     }`}
+   >
+
+     <button
+       className="closemenu"
+       onClick={ ()=> props.hideMobileMenu }
+     >
+       x
+     </button>
+
+     <ul className="mobile_menu_list">
+       {props.navlist.map((navItem) => (
+         <li key={navItem}>{navItem}</li>
+       ))}
+     </ul>
+   </nav>
+ );
+
+
+
+{/*
+  <div>
+    <div>
+
+
+
      <ul className="main-nav" style={{display: this.state.display}}>
                  <li><a href="#">about</a></li>
                  <li><a href="#">work</a></li>
@@ -57,55 +114,9 @@ class Header extends React.Component {
       }
     }
 
-{/*
-
-     <MainNav
-        navlist={this.state.navlist}
-        showMobileMenu={this.showMobileMenu}
-      />
-      <MobileMenu
-        navlist={this.state.navlist}
-        mobileMenuDisplayed={this.state.mobileMenuDisplayed}
-        hideMobileMenu={this.hideMobileMenu}
-      />
-
-);
-}
-};
-
-const MainNav = (props) => (
-  <nav className="main-nav">
-  <span className="menuImg" onClick={ () =>props.showMobileMenu()}>
-<img src="iconfinder_line-list_1954545-1.png" width="30px" height="30px" />
-</span>
-    <ul className="nav-list">
-      {props.navlist.map((navItem) => (
-        <li>{navItem}</li>
-      ))}
-    </ul>
-  </nav>
-);
-
-const MobileMenu = (props) => (
-  <nav
-    className={`mobile_menu mobile-menu_${
-      props.mobileMenuDisplayed ? "shown" : "hidden"
-    }`}
-  >
-    <button
-      className="closemenu"
-      onClick={ ()=> props.hideMobileMenu }
-    >
-      x
-    </button>
-    <ul className="mobile-menu-list">
-      {props.navList.map((navItem) => (
-        <li>{navItem}</li>
-      ))}
-    </ul>
-  </nav>
-);
 */}
+
+
 
 {/*<!-- Banner -->*/}
 class Banner extends React.Component {
@@ -131,68 +142,59 @@ render() {
 
 		{/*<!-- content-->
       <section className="main-content"></section> */}
-class Row extends React.Component {
-  render() {
-      return(
-        <div>
-        <h2 className="main-content-title">to start somewhere</h2>
-        </div>
+      class MainContent extends React.Component {
+        state = {
+          isBoxesGroup2Displayed: false,
+        };
 
-        <div className="row">
-        <div className="content-box">content1</div>
-        <div className="content-box">content2</div>
-        <div className="content-box">content3</div>
-        <div className="content-box">content4</div>
-        </div>
-      )
-    }
-  }
+        showMoreBox = () => {
+          this.setState({ isBoxesGroup2Displayed: true });
+        };
 
+        render() {
+          return (
+            <section className="main-content">
 
-  class Call extends React.Component {
-  state={
-         display:"none",
-  };
+            <div>
+            <h2 className="main-content-title">to start somewhere</h2>
+            </div>
 
- showMoreBox=() =>{
-  this.setState({ display:"flex" });
-};
-
-render() {
-    return(
+              <div className="row">
+              <div className="content-box">content1</div>
+              <div className="content-box">content2</div>
+              <div className="content-box">content3</div>
+              <div className="content-box">content4</div>
+              </div>
 
   <button className="call" onClick={ ()=> {this.showMoreBox();}}> call to action</button>
 
-<div className="moretoshow" style={{ display: this.state.display }}>
-  <div className="content-box">content5</div>
-  <div className="content-box">content6</div>
-  <div className="content-box">content7</div>
-  <div className="content-box">content8</div>
-</div>
-)
-}
-}
+
+              <ContentBoxes isDisplayed={this.state.isBoxesGroup2Displayed}>
+              <div className="moretoshow" style={{ display: this.state.display }}>
+                <div className="content-box">content5</div>
+                <div className="content-box">content6</div>
+                <div className="content-box">content7</div>
+                <div className="content-box">content8</div>
+              </div>
+              </ContentBoxes>
+            </section>
+          );
+        }
+      }
+
+      const ContentBoxes = (props) => (
+        <div
+          className="content-boxes"
+          style={{ display: props.isDisplayed ? "block" : "none" }}
+        >
+          <div className="row">{props.children}</div>
+        </div>
+      );
 
 
 
-<<<<<<< HEAD
-||||||| 6c613b1... Update w4-a3.js
-const Moretoshow = (props) => (
-  <div
-    className="moretoshow"
-    style={{ display: props.Displayed ? "flex" : "none" }}
-  >
-  </div>
-);
-=======
-const Moretoshow = (props) => (
-  <div
-    className="moretoshow"
-    style={{ display: props.Displayed ? "block" : "none" }}
-  >
-  </div>
-);
->>>>>>> parent of 6c613b1... Update w4-a3.js
+
+
 
 {/*<!-- Footer-->*/}
 function Footer() {
