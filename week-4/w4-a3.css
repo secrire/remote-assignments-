@@ -111,11 +111,16 @@ margin:1rem auto;}
 }
 */
 
-/*.moretoshow{
-/*  display: none;
+.moretoshow{
+
+  flex-wrap:wrap;
+    flex-direction: row;
+   }
+   /*  display: none;
     width: 100%;
   }
   */
+
 
 .content-box{
   height: 3rem;
