@@ -113,6 +113,7 @@ margin:1rem auto;}
 
 .moretoshow{
 justify-content: center;
+flex-wrap:wrap;
    }
    /*  display: none;
     width: 100%;
