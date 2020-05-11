@@ -97,11 +97,10 @@ margin:1rem auto;}
   flex-direction: column;
 }
 
-/*
 .moretoshow{
   display: none;
 }
-*/
+
 .content-box{
   height: 3rem;
   background-color: gold;
