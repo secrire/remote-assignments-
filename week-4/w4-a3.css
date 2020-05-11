@@ -36,16 +36,16 @@ ul{
   display:none;
         font-size: 1.1rem;
       }
-/*
 
-.mobile-menu_hidden {
+
+.mobile_menu_hidden {
   transform: translateX(100%);
 }
 
-.mobile-menu_shown {
+.mobile_menu_shown {
   transform: none;
 }
-*/
+
 .mobile_menu{
   position: fixed;
 /*  transform: translateX(100%);*/
