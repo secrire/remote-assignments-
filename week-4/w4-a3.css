@@ -113,11 +113,11 @@ margin:1rem auto;}
 
 .moretoshow{
       width: 100%;
+      flex-direction: column;
 justify-content: center;
-  margin:0 auto;
    }
    /*  display: none;
-   flex-direction: column;
+
    flex-wrap:wrap;
   }
   */
