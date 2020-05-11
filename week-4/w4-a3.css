@@ -154,7 +154,7 @@ footer {
 /* media */
 
 @media (min-width: 500px) {
- .row  {
+ .row , .moretoshow  {
 flex-wrap:wrap;
    flex-direction: row;
   }
