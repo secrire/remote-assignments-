@@ -39,7 +39,7 @@ class Header extends React.Component {
        />
        <MobileMenu
          navlist={this.state.navlist}
-         mobileMenuDisplayed={this.state.mobileMenuDisplayed}
+         isMobileMenuShown={this.state.isMobileMenuShown}
          hideMobileMenu={this.hideMobileMenu}
        />
      </header>
@@ -63,7 +63,7 @@ class Header extends React.Component {
  const MobileMenu = (props) => (
    <nav
      className={`mobile_menu mobile_menu_${
-       props.mobileMenuDisplayed ? "shown" : "hidden"
+       props.isMobileMenuShown ? "shown" : "hidden"
      }`}
    >
 
