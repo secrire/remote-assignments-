@@ -114,11 +114,11 @@ margin:1rem auto;}
 .moretoshow{
       width: 100%;
 justify-content: center;
-  flex-direction: column;
-  flex-wrap:wrap;
+
    }
    /*  display: none;
-
+   flex-direction: column;
+   flex-wrap:wrap;
   }
   */
 
