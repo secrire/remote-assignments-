@@ -170,7 +170,7 @@ render() {
 
 
               <ContentBoxes isDisplayed={this.state.isBoxesGroup2Displayed}>
-              <div className="moretoshow" style={{ display: this.state.display }}>
+              <div className="moretoshow">
                 <div className="content-box">content5</div>
                 <div className="content-box">content6</div>
                 <div className="content-box">content7</div>
@@ -184,10 +184,9 @@ render() {
 
       const ContentBoxes = (props) => (
         <div
-          className="content-boxes"
           style={{ display: props.isDisplayed ? "block" : "none" }}
         >
-          <div className="row">{props.children}</div>
+          <div>{props.children}</div>
         </div>
       );
 
