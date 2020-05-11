@@ -159,6 +159,10 @@ flex-wrap:wrap;
    flex-direction: row;
   }
 
+ .moretoshow{
+   flex-wrap:wrap;
+ }
+
 .content-box{
 flex:1 40%;
 }
