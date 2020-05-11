@@ -175,7 +175,7 @@ render() {
                 <div className="content-box">content6</div>
                 <div className="content-box">content7</div>
                 <div className="content-box">content8</div>
-      
+
               </Moretoshow>
             </section>
           );
@@ -187,8 +187,8 @@ render() {
           className="moretoshow"
           style={{ display: props.isDisplayed ? "flex" : "none" }}
         >
-          <div>{props.children}</div>
-        </div>
+          {props.children}</div>
+
       );
 
 
